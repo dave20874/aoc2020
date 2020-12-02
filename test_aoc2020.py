@@ -19,7 +19,7 @@ def solns():
 # ---------------------------------------------------------------
 # Test cases, one for each part of each day.
 
-def test_day1_p1(days, solns):
+def test_days(days, solns):
     for d in range(25):
         day = d+1
         if days[day].part1() is not None:
