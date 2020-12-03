@@ -3,9 +3,12 @@
 #
 # This project, by David Wheeler, is an attempted solution in Python with unit tests.
 
+from functools import reduce
+
 # Support classes developed along the way
 from expense_report import ExpenseReport     # For Day 1
 from password_db import PasswordDb           # For Day 2
+from forest import Forest                    # For Day 3
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -63,6 +66,22 @@ class Day2(AocDay):
 class Day3(AocDay):
     def __init__(self):
         super().__init__(3)
+        self.forest = Forest("data/day3_input.txt")
+
+    def part1(self):
+        return self.forest.get_num_trees(3, 1)
+
+    def part2(self):
+        slopes = ((1, 1), (3, 1), (5, 1), (7, 1), (1, 2))
+
+        # See how many trees we hit on each slope
+        trees_hit = map((lambda slope: self.forest.get_num_trees(slope[0], slope[1])), slopes)
+
+        # Multiply those numbers together
+        prod = reduce((lambda x, y: x * y), trees_hit)
+
+        # That's the answer
+        return prod
 
 # ------------------------------------------------
 class Day4(AocDay):
