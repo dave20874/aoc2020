@@ -9,6 +9,7 @@ from functools import reduce
 from expense_report import ExpenseReport     # For Day 1
 from password_db import PasswordDb           # For Day 2
 from forest import Forest                    # For Day 3
+from passports import Passports              # For Day 4
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -87,6 +88,13 @@ class Day3(AocDay):
 class Day4(AocDay):
     def __init__(self):
         super().__init__(4)
+        self.passports = Passports("data/day4_input.txt")
+
+    def part1(self):
+        return Passports("data/day4_input.txt").validate()
+
+    def part2(self):
+        return Passports("data/day4_input.txt").validate(check_fields=True)
 
 # ------------------------------------------------
 class Day5(AocDay):
