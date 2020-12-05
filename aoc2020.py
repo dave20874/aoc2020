@@ -10,6 +10,7 @@ from expense_report import ExpenseReport     # For Day 1
 from password_db import PasswordDb           # For Day 2
 from forest import Forest                    # For Day 3
 from passports import Passports              # For Day 4
+from boarding_pass import BoardingPass       # For Day 5
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -100,6 +101,14 @@ class Day4(AocDay):
 class Day5(AocDay):
     def __init__(self):
         super().__init__(5)
+
+    def part1(self):
+        passes = BoardingPass("data/day5_input.txt")
+        return passes.find_max()
+
+    def part2(self):
+        passes = BoardingPass("data/day5_input.txt")
+        return passes.find_missing()
 
 # ------------------------------------------------
 class Day6(AocDay):
