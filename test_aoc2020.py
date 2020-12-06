@@ -19,11 +19,15 @@ def solns():
 # ---------------------------------------------------------------
 # Test cases, one for each part of each day.
 
-def test_days(days, solns):
+def test_part1(days, solns):
     for d in range(25):
         day = d+1
         if days[day].part1() is not None:
             assert days[day].part1() == solns.get_solution(day, 1)
+
+def test_part2(days, solns):
+    for d in range(25):
+        day = d + 1
         if days[day].part2() is not None:
             assert days[day].part2() == solns.get_solution(day, 2)
 

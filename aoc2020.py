@@ -11,6 +11,7 @@ from password_db import PasswordDb           # For Day 2
 from forest import Forest                    # For Day 3
 from passports import Passports              # For Day 4
 from boarding_pass import BoardingPass       # For Day 5
+from customs import Customs                      # For Day 6
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -114,6 +115,14 @@ class Day5(AocDay):
 class Day6(AocDay):
     def __init__(self):
         super().__init__(6)
+
+    def part1(self):
+        dummy = Customs("data/day6_input.txt")
+        return dummy.part1()
+
+    def part2(self):
+        dummy = Customs("data/day6_input.txt")
+        return dummy.part2()
 
 # ------------------------------------------------
 class Day7(AocDay):
