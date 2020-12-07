@@ -11,7 +11,8 @@ from password_db import PasswordDb           # For Day 2
 from forest import Forest                    # For Day 3
 from passports import Passports              # For Day 4
 from boarding_pass import BoardingPass       # For Day 5
-from customs import Customs                      # For Day 6
+from customs import Customs                  # For Day 6
+from bag_rules import BagRules               # For Day 7
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -128,6 +129,14 @@ class Day6(AocDay):
 class Day7(AocDay):
     def __init__(self):
         super().__init__(7)
+
+    def part1(self):
+        rules = BagRules("data/day7_input.txt")
+        return rules.num_outer("shiny gold")
+
+    def part2(self):
+        rules = BagRules("data/day7_input.txt")
+        return rules.contained_in("shiny gold")
 
 # ------------------------------------------------
 class Day8(AocDay):
