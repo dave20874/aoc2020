@@ -13,6 +13,7 @@ from passports import Passports              # For Day 4
 from boarding_pass import BoardingPass       # For Day 5
 from customs import Customs                  # For Day 6
 from bag_rules import BagRules               # For Day 7
+from computer import Computer                # For Day 8
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -140,8 +141,23 @@ class Day7(AocDay):
 
 # ------------------------------------------------
 class Day8(AocDay):
+    PROGRAM = "data/day8_input.txt"
+
     def __init__(self):
         super().__init__(8)
+
+    def part1(self):
+        comp = Computer(Day8.PROGRAM)
+        comp.reset()
+        halted = comp.runToRepeat()
+        return comp.acc
+
+    def part2(self):
+        comp = Computer(Day8.PROGRAM)
+        comp.fixLoop()
+
+        return comp.acc
+
 
 # ------------------------------------------------
 class Day9(AocDay):
