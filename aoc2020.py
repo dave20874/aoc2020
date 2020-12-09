@@ -14,6 +14,7 @@ from boarding_pass import BoardingPass       # For Day 5
 from customs import Customs                  # For Day 6
 from bag_rules import BagRules               # For Day 7
 from computer import Computer                # For Day 8
+from xmas_code import XmasCode               # For Day 9
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -163,6 +164,18 @@ class Day8(AocDay):
 class Day9(AocDay):
     def __init__(self):
         super().__init__(9)
+
+    def part1(self):
+        code = XmasCode("data/day9_input.txt", 50)
+        code.scan_preamble()
+        check, value = code.find_mismatch()
+        assert check == False
+        return value
+
+    def part2(self):
+        code = XmasCode("data/day9_input.txt", 50)
+        value = code.find_weakness()
+        return value
 
 # ------------------------------------------------
 class Day10(AocDay):
