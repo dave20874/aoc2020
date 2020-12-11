@@ -15,7 +15,8 @@ from customs import Customs                  # For Day 6
 from bag_rules import BagRules               # For Day 7
 from computer import Computer                # For Day 8
 from xmas_code import XmasCode               # For Day 9
-from adapter_set import AdapterSet                  # For Day 10
+from adapter_set import AdapterSet           # For Day 10
+from seating import Seating                     # For Day 11
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -182,19 +183,25 @@ class Day9(AocDay):
 class Day10(AocDay):
     def __init__(self):
         super().__init__(10)
+        self.adapters = AdapterSet("data/day10_input.txt")
 
     def part1(self):
-        daily = AdapterSet("data/day10_input.txt")
-        return daily.part1();
+        return self.adapters.part1();
 
     def part2(self):
-        daily = AdapterSet("data/day10_input.txt")
-        return daily.part2();
+        return self.adapters.part2();
 
 # ------------------------------------------------
 class Day11(AocDay):
     def __init__(self):
         super().__init__(11)
+        self.seating = Seating("data/day11_input.txt")
+
+    def part1(self):
+        return self.seating.part1()
+
+    def part2(self):
+        return self.seating.part2()
 
 # ------------------------------------------------
 class Day12(AocDay):
