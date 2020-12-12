@@ -16,7 +16,8 @@ from bag_rules import BagRules               # For Day 7
 from computer import Computer                # For Day 8
 from xmas_code import XmasCode               # For Day 9
 from adapter_set import AdapterSet           # For Day 10
-from seating import Seating                     # For Day 11
+from seating import Seating                  # For Day 11
+from route import Route                      # For Day 12
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -207,6 +208,14 @@ class Day11(AocDay):
 class Day12(AocDay):
     def __init__(self):
         super().__init__(12)
+
+    def part1(self):
+        route = Route("data/day12_input.txt")
+        return route.part1()
+
+    def part2(self):
+        route = Route("data/day12_input.txt")
+        return route.part2()
 
 # ------------------------------------------------
 class Day13(AocDay):
