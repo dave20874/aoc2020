@@ -18,6 +18,7 @@ from xmas_code import XmasCode               # For Day 9
 from adapter_set import AdapterSet           # For Day 10
 from seating import Seating                  # For Day 11
 from route import Route                      # For Day 12
+from shuttle_search import Schedule          # For Day 13
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -222,6 +223,13 @@ class Day13(AocDay):
     def __init__(self):
         super().__init__(13)
 
+    def part1(self):
+        schedule = Schedule("data/day13_input.txt")
+        return schedule.part1()
+
+    def part2(self):
+        schedule = Schedule("data/day13_input.txt")
+        return schedule.part2()
 
 # ------------------------------------------------
 class Day14(AocDay):
