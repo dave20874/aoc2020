@@ -19,6 +19,7 @@ from adapter_set import AdapterSet           # For Day 10
 from seating import Seating                  # For Day 11
 from route import Route                      # For Day 12
 from shuttle_search import Schedule          # For Day 13
+from docking_data import DockingData         # For Day 14
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -236,6 +237,15 @@ class Day14(AocDay):
     def __init__(self):
         super().__init__(14)
 
+    def part1(self):
+        dd = DockingData()
+        dd.load("data/day14_input.txt")
+        return dd.get_sum()
+
+    def part2(self):
+        dd = DockingData()
+        dd.load2("data/day14_input.txt")
+        return dd.get_sum()
 
 # ------------------------------------------------
 class Day15(AocDay):
