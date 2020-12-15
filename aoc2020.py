@@ -20,6 +20,7 @@ from seating import Seating                  # For Day 11
 from route import Route                      # For Day 12
 from shuttle_search import Schedule          # For Day 13
 from docking_data import DockingData         # For Day 14
+from rambunctious_recitation import Recitation  # For Day 15
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -252,6 +253,15 @@ class Day15(AocDay):
     def __init__(self):
         super().__init__(15)
 
+    def part1(self):
+        rec = Recitation("data/day15_input.txt")
+        rec.start()
+        return rec.play_to(2020)
+
+    def part2(self):
+        rec = Recitation("data/day15_input.txt")
+        rec.start()
+        return rec.play_to(30000000)
 
 # ------------------------------------------------
 class Day16(AocDay):
