@@ -21,6 +21,7 @@ from route import Route                      # For Day 12
 from shuttle_search import Schedule          # For Day 13
 from docking_data import DockingData         # For Day 14
 from rambunctious_recitation import Recitation  # For Day 15
+from ticket_translation import TicketInfo    # For Day 16
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -268,6 +269,13 @@ class Day16(AocDay):
     def __init__(self):
         super().__init__(16)
 
+    def part1(self):
+        ti = TicketInfo("data/day16_input.txt")
+        return ti.scan_err_rate()
+
+    def part2(self):
+        ti = TicketInfo("data/day16_input.txt")
+        return ti.part2()
 
 # ------------------------------------------------
 class Day17(AocDay):
