@@ -22,6 +22,8 @@ from shuttle_search import Schedule          # For Day 13
 from docking_data import DockingData         # For Day 14
 from rambunctious_recitation import Recitation  # For Day 15
 from ticket_translation import TicketInfo    # For Day 16
+from conway_cubes import ConwayCubes         # Day 17
+
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -281,6 +283,18 @@ class Day16(AocDay):
 class Day17(AocDay):
     def __init__(self):
         super().__init__(17)
+
+    def part1(self):
+        cc = ConwayCubes("data/day17_input.txt", 3)
+        for n in range(6):
+            cc.step()
+        return cc.active_cubes();
+
+    def part2(self):
+        cc = ConwayCubes("data/day17_input.txt", 4)
+        for n in range(6):
+            cc.step()
+        return cc.active_cubes();
 
 
 # ------------------------------------------------
