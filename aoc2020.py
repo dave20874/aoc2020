@@ -23,6 +23,7 @@ from docking_data import DockingData         # For Day 14
 from rambunctious_recitation import Recitation  # For Day 15
 from ticket_translation import TicketInfo    # For Day 16
 from conway_cubes import ConwayCubes         # Day 17
+from operator_order import OperatorOrder     # Day 18
 
 
 # Base class for an Advent of Code daily class.
@@ -301,6 +302,10 @@ class Day17(AocDay):
 class Day18(AocDay):
     def __init__(self):
         super().__init__(18)
+
+    def part1(self):
+        oo = OperatorOrder("data/day18_input.txt")
+        return oo.part1()
 
 
 # ------------------------------------------------
