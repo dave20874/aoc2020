@@ -19,5 +19,5 @@ def test_get_solution(soln_set):
 
 def test_get_num_solutions(soln_set):
     # Increment number as we open up new days of the challenge.
-    assert soln_set.get_num_solutions() == 18
+    assert soln_set.get_num_solutions() == 19
 

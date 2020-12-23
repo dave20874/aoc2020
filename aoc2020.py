@@ -24,6 +24,7 @@ from rambunctious_recitation import Recitation  # For Day 15
 from ticket_translation import TicketInfo    # For Day 16
 from conway_cubes import ConwayCubes         # Day 17
 from operator_order import OperatorOrder     # Day 18
+from monster_messages import MonsterMessages # Day 19
 
 
 # Base class for an Advent of Code daily class.
@@ -307,12 +308,22 @@ class Day18(AocDay):
         oo = OperatorOrder("data/day18_input.txt")
         return oo.part1()
 
+    def part2(self):
+        oo = OperatorOrder("data/day18_input.txt")
+        return oo.part2()
 
 # ------------------------------------------------
 class Day19(AocDay):
     def __init__(self):
         super().__init__(19)
 
+    def part1(self):
+        mm = MonsterMessages("data/day19_input.txt")
+        return mm.num_match()
+
+    def part2(self):
+        mm = MonsterMessages("data/day19_input.txt")
+        return mm.part2()
 
 # ------------------------------------------------
 class Day20(AocDay):
