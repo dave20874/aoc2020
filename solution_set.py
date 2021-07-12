@@ -13,7 +13,19 @@ class SolutionSet:
         f = open("data/solutions.txt", "r")
         for (n, line) in enumerate(f.readlines()):
             parts = line.split(" ")
-            self.solutions[n] = ( int(parts[0].strip()), int(parts[1].strip()), )
+            p1 = parts[0].strip()
+            try:
+                p1 = int(parts[0].strip())
+            except Exception:
+                pass
+
+            p2 = parts[1].strip()
+            try:
+                p2 = int(parts[1].strip())
+            except Exception:
+                pass
+
+            self.solutions[n] = ( p1, p2 )
 
     # Get solution for day, part.  (Day is 1-25, Part is 1 or 2)
     def get_solution(self, day, part):

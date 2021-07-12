@@ -25,7 +25,12 @@ from ticket_translation import TicketInfo    # For Day 16
 from conway_cubes import ConwayCubes         # Day 17
 from operator_order import OperatorOrder     # Day 18
 from monster_messages import MonsterMessages # Day 19
-
+from jurassic_jigsaw import JurassicJigsaw   # Day 20
+from allergen_assessment import AllergenAssessment
+from crab_combat import CrabCombat
+from crab_cups import CrabCups
+from lobby_layout import LobbyLayout
+from combo_breaker import ComboBreaker
 
 # Base class for an Advent of Code daily class.
 # A separate class supports each day with methods part1() and part2()
@@ -330,11 +335,26 @@ class Day20(AocDay):
     def __init__(self):
         super().__init__(20)
 
+    def part1(self):
+        jj = JurassicJigsaw("data/day20_input.txt", 12, 12)
+        return jj.part1()
+
+    def part2(self):
+        jj = JurassicJigsaw("data/day20_input.txt", 12, 12)
+        return jj.part2()
 
 # ------------------------------------------------
 class Day21(AocDay):
     def __init__(self):
         super().__init__(21)
+
+    def part1(self):
+        aa = AllergenAssessment("data/day21_input.txt")
+        return aa.part1()
+
+    def part2(self):
+        aa = AllergenAssessment("data/day21_input.txt")
+        return aa.part2()
 
 
 # ------------------------------------------------
@@ -342,11 +362,26 @@ class Day22(AocDay):
     def __init__(self):
         super().__init__(22)
 
+    def part1(self):
+        cc = CrabCombat("data/day22_input.txt")
+        return cc.part1()
+
+    def part2(self):
+        cc = CrabCombat("data/day22_input.txt")
+        return cc.part2()
 
 # ------------------------------------------------
 class Day23(AocDay):
     def __init__(self):
         super().__init__(23)
+
+    def part1(self):
+        cc = CrabCups("156794823")
+        return cc.part1(100)
+
+    def part2(self):
+        cc = CrabCups("156794823", 1000000)
+        return cc.part2(10000000)
 
 
 # ------------------------------------------------
@@ -354,11 +389,27 @@ class Day24(AocDay):
     def __init__(self):
         super().__init__(24)
 
+    def part1(self):
+        ll = LobbyLayout("data/day24_input.txt")
+        return ll.part1()
+
+    def part2(self):
+        ll = LobbyLayout("data/day24_input.txt")
+        return ll.part2()
+
 
 # ------------------------------------------------
 class Day25(AocDay):
     def __init__(self):
         super().__init__(25)
+
+    def part1(self):
+        cb = ComboBreaker("data/day25_input.txt")
+        return cb.part1()
+
+    def part2(self):
+        cb = ComboBreaker("data/day25_input.txt")
+        return cb.part2()
 
 
 # ------------------------------------------------
